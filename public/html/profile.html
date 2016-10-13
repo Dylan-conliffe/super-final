@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="Cypher">
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/TheLook/profile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.1/ng-file-upload.js"></script>
+    <script src="/js/module.js"></script>
+
+    <script src="/js/users.controller.js"></script>
+
+
+</head>
+
+<body ng-controller="cypherCtrl as cCtrl">
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/tracks"> My tracks</a></li>
+                    <li><a href="#/tracks/list">Track List </a></li>
+                    <li><a href="#/edit">Edit</a></li>
+                    <li><a href="/logout"> Log out </a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted"> <a href='/'> Get Cyphin' </a></h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1> 
+              <img ng-src="{{cCtrl.file}}">
+            </h1>
+
+
+        </div>
+        <ng-view>
+
+        </ng-view>
+        <footer class="footer">
+            <p>&copy; 2016 Cypher, Your Mama.</p>
+        </footer>
+
+    </div>
+    <!-- /container -->
+
+
+</body>
+
+</html>

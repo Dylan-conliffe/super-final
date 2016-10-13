@@ -1,0 +1,33 @@
+body{ 
+    background-image: url('trump.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1{
+      text-align: center;
+      font-family: 'Creepster', cursive;
+       color:ghostwhite;
+      font-size: 200px;
+      padding-top: 300px;
+      opacity: 0.5;
+}
+.mycenter {
+    position: relative;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%) }
+
+button{
+    color: red;
+    background-color: slategrey;
+    border-radius: 10%;
+    font-size: 30px;
+    font-family: 'creepster', cursive;
+    margin-top: 40px;
+    opacity: 0.5;
+}
+
+header{
+    display: inline-block;
+}

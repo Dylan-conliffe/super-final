@@ -1,0 +1,70 @@
+body {
+    background-color: white;
+}
+
+
+
+
+nav {
+   display: inline-block;
+    
+}
+
+nav form{
+    float: right;
+}
+
+
+
+img {
+    height: 30px;
+}
+
+div {
+    text-align: center;
+    background-image: url('Concert-crowd.JPG');
+    height: 50%;
+    width: 100%;
+    padding-top: 500px;
+}
+
+button {
+    background-image: url('Concert-crowd.JPG');
+    font-size: 20px;
+    color: white;
+}
+
+input{
+   
+    border: 5px solid black; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background:white;
+    margin: 0 0 10px 0;
+    
+   
+}
+
+span h1 {
+    text-align: center;
+    font-family: 'creepster', cursive;
+    font-size: 40px;
+    align-items: center;
+}
+
+span p {
+    text-align: center;
+    font-size: 35px;
+    margin: 30px;
+}
+footer{
+   text-align: center;
+}

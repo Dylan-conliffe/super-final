@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app.auth">
+
+<head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  
+    <script src ="/js/controller.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/TheLook/mainstyle.css">
+</head>
+
+
+<body ng-controller="app.auth.controller as auth">
+    <div>
+        <form ng-submit="auth.register.submit($event)">
+
+            <input type="text" placeholder="email" ng-model=" auth.payload.email">
+            <input type="text" placeholder=" Username" ng-model="auth.payload.username">
+            <input type="password" placeholder=" password" ng-model="auth.payload.password" >
+            <button type="submit">Get Chypin'</button>
+            <p> </p>
+        </form>
+
+</div>
+</body>
+
+<span>
+        <h1> Why join ?</h1>
+                <p> Find yourself staring at a wall having no idea where you want to take your track?
+                     get help!
+                </p>
+                <h1> Flex your creative muslces! </h1>
+                <p> 
+                    Let your creative flag fly! help a fellow producer out 
+                </p>
+            </span>
+
+<footer>
+    <strong>
+                   <address>
+   <a href="dyldonomusnyc@gmail.com">Contact me not here.</a>
+</address>
+                </strong>
+
+</footer>
+
+</html>
