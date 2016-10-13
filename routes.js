@@ -16,11 +16,12 @@ module.exports = function routes(app) {
     });
 
     app.all('/profile*', Auth.middlewares.session);
-    app.get('profile/track/list',Profile.tracks.list);
-    
+
     app.get('/profile', Profile.render);
     //app.get('/profile/files',);
     app.post('/profile/edit', multiparty, Profile.edit);
+
+    app.get('/profile/tracks', Profile.tracks.list);
     app.post('/profile/tracks',multiparty, Profile.tracks.post )
     //
     // ─── AUTH ROUTES ───────────────────────────────────────────────────────────────────────

@@ -1,8 +1,12 @@
-<div ng-init="cCtrl.getProfile()">
-  <form ng-submit='cCtrl.createProfile()'>
-    <h4> Profile Picture </h4>
-    <input type="file" ngf-select=" " ngf-accept="'image/*'" ngf-pattern="'image/*'" ng-model="cCtrl.file">
-    
+<h4> Profile Picture </h4>
+<form ng-submit='cCtrl.createProfile()'>
+    <input
+        type="file"
+        ngf-select=" "
+        ngf-accept="'image/*'"
+        ngf-pattern="'image/*'"
+        ng-model="cCtrl.file"/>
+
     <h4>About you!</h4>
     <input type='text' placeholder=" Tell me about yourself! We care" ng-model="cCtrl.about">
 
@@ -15,7 +19,5 @@
     <h4> Your software </h4>
     <input type='text' placeholder="Your software" ng-model="cCtrl.software">
 
-    <button> Save </button>
-  </form>
-
-</div>
+    <button type="submit"> Save </button>
+</form>
