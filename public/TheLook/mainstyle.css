@@ -22,14 +22,14 @@ img {
 
 div {
     text-align: center;
-    background-image: url('Concert-Crowd.JPG');
+    background-image: url('Concert-Crowd.jpg');
     height: 50%;
     width: 100%;
     padding-top: 500px;
 }
 
 button {
-    background-image: url('Concert-Crowd.JPG');
+    background-image: url('Concert-Crowd.jpg');
     font-size: 20px;
     color: white;
 }
