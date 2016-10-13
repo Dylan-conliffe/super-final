@@ -64,46 +64,47 @@ ProfileController = {
 
             req.body.data.file = url;
             ProfileController.update(req, res);
-
-            // new File({
-            //     userId: req.session.user._id,
-            //     name: req.body.fileName,
-            //     // attributes: req.body.attributes,
-            //     url: url
-            // }).save((err, newFile) => {
-            //     if( err ) {
-            //         res.status(500).send({
-            //             message: 'Could not save file into mongoose',
-            //             reason: 'Shit got fucked',
-            //             error: err
-            //         });
-            //     } else {
-            //         console.info('NEW FILE BITCHES!', newFile);
-            //         ProfileController.update(req, res);
-            //     }
-            // });
-            // req.session.user.file = filePath;
-            // console.log('help:',req.session.user,typeof(req.session.user) );
-            //req.session.user.save();            // We will save the s3 URL using File
         });
     },
-    getFiles : (req, res) => {
-        File.find({
-            userId: req.session.userId || req.query.userId
-        }, (err, files) => {
-            if( err ) {
-                res.status(500).send(err);
-            } else {
-                //res.send(files);
-                
-            }
-        });
-        // File.findOne({_id: req.session.user._id},(err,file) =>{
-        //     console.log('file',file)
-        //     res.json(file);
-            
-        // } )
+    tracks: {
+        list: (req, res) => {
+            File.find({
+                userId: req.session.userId || req.query.userId
+            }, (err, files) => {
+                if( err ) {
+                    res.status(500).send(err);
+                } else {
+                    //res.send(files);
+                    
+                }
+            });
+        },
+        post: (req, res) => {
+            new File({
+                userId: req.session.user._id,
+                name: req.body.fileName,
+                // attributes: req.body.attributes,
+                url: url
+            }).save((err, newFile) => {
+                if( err ) {
+                    res.status(500).send({
+                        message: 'Could not save file into mongoose',
+                        reason: 'Shit got fucked',
+                        error: err
+                    });
+                } else {
+                    console.info('NEW FILE BITCHES!', newFile);
+                    res.send(newFile);
+                }
+            });
+        }
     }
-};
+},
+
+            s3Upload ={
+
+            }
+
+            
 
 module.exports = ProfileController;

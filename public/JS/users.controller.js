@@ -48,6 +48,18 @@ function cypherController($http, Upload) {
             cCtrl.file = response.data;
         });
     }
+        cCtrl.addTracks = function (){
+            upload.upload({
+                url: '/profile/tracks',
+                method: 'POST',
+                data: {
+                    files: cCtrl.tracks,
+                    data: {
+                        name: cCtrl.trackName
 
+                    }
+                }
+            })
+        }
 
 }

@@ -1,6 +1,6 @@
 module.exports = require('mongoose').model('file', {
     userId: String,
-    // name: String,
+     trackName: String,
     // attributes: Object,
     url: {
         type: String,
