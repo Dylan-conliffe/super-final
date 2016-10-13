@@ -43,6 +43,7 @@ function cypherController($http, $sce, Upload) {
         }).then(function (response) {
             console.log("updated user: ", response);
             cCtrl.file = response.data.file;
+            alert('Saved, refresh page')
         }, function (error) {
             console.error(error);
         });
@@ -57,12 +58,15 @@ function cypherController($http, $sce, Upload) {
             data: {
                 files: cCtrl.file
             }
+            
         });
+        alert('Saved, refresh page')
     };
 
     cCtrl.getTracks = function() {
         $http.get('/profile/tracks')
             .then(function(res){
+                
                 console.log('Track list', res.data);
                 cCtrl.trackList = res.data;
             }, function(err){
