@@ -16,6 +16,8 @@ module.exports = function routes(app) {
     });
 
     app.all('/profile*', Auth.middlewares.session);
+    app.get('profile/track/list',Profile.getFiles);
+    app.get('profile/tracks',Profile.edit);
     app.get('/profile', Profile.render);
     app.get('/profile/files', Profile.getFiles);
     app.post('/profile/edit', multiparty, Profile.edit);

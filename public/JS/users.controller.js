@@ -35,7 +35,7 @@ function cypherController($http, Upload) {
 
         $http.get('/me').then(function (response) {
             // // console.log("Profile data: ", response.data);
-            //cCtrl.tracks = response.data.tracks
+            cCtrl.track = response.data.tracks
             cCtrl.file = response.data.file;
             cCtrl.about = response.data.about;
             cCtrl.role = response.data.role;

@@ -12,6 +12,7 @@ userSchema = new mongoose.Schema({
     role: String,
     file: String,
     software: String,
+    track: String,
     created: {
         type: Number,
         default: () => Date.now()

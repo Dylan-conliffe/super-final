@@ -88,21 +88,21 @@ ProfileController = {
         });
     },
     getFiles : (req, res) => {
-        // File.find({
-        //     userId: req.session.userId || req.query.userId
-        // }, (err, files) => {
-        //     if( err ) {
-        //         res.status(500).send(err);
-        //     } else {
-        //         //res.send(files);
+        File.find({
+            userId: req.session.userId || req.query.userId
+        }, (err, files) => {
+            if( err ) {
+                res.status(500).send(err);
+            } else {
+                //res.send(files);
                 
-        //     }
-        // });
-        File.findOne({_id: req.session.user._id},(err,file) =>{
-            console.log('file',file)
-            res.json(file);
+            }
+        });
+        // File.findOne({_id: req.session.user._id},(err,file) =>{
+        //     console.log('file',file)
+        //     res.json(file);
             
-        } )
+        // } )
     }
 };
 
